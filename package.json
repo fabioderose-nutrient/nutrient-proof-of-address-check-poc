@@ -1,0 +1,15 @@
+{
+  "name": "nutrient-proof-of-address-check-poc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Proof of address check with the Nutrient Data Extraction API",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js",
+    "evaluate": "node scripts/evaluate.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "file": "01-electricity-bill.pdf",
+    "title": "Electricity bill",
+    "applicant": {
+      "fullName": "Eleanor Mary Whitcombe",
+      "addressLine1": "Flat 3, 27 Kingsmere Rd",
+      "addressLine2": "Ashbury",
+      "town": "Halverton",
+      "postcode": "HV4 7QT",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "accept",
+      "note": "Middle initial on the bill, 'Rd' typed for 'Road'."
+    },
+    "truth": {
+      "document_type": "utility_bill",
+      "issuer_name": "Larkfield Energy Ltd",
+      "holder_name": "Mrs Eleanor M Whitcombe",
+      "address_lines": [
+        "Flat 3",
+        "27 Kingsmere Road",
+        "Ashbury"
+      ],
+      "town": "Halverton",
+      "postcode": "HV4 7QT",
+      "document_date": "2026-10-06",
+      "account_reference": "8041 2277 935"
+    }
+  },
+  {
+    "file": "02-bank-statement.pdf",
+    "title": "Bank statement, first page",
+    "applicant": {
+      "fullName": "José Álvarez Romero",
+      "addressLine1": "14 Saint Albans Ave",
+      "addressLine2": "Millbrook",
+      "town": "Halverton",
+      "postcode": "HV2 9LP",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "accept",
+      "note": "Accents typed by the applicant, capitals and 'ST' on the statement."
+    },
+    "truth": {
+      "document_type": "bank_statement",
+      "issuer_name": "Fernvale Bank plc",
+      "holder_name": "MR JOSE ALVAREZ ROMERO",
+      "address_lines": [
+        "14 ST ALBANS AVENUE",
+        "MILLBROOK"
+      ],
+      "town": "HALVERTON",
+      "postcode": "HV2 9LP",
+      "document_date": "2026-10-01",
+      "account_reference": "61842093"
+    }
+  },
+  {
+    "file": "03-council-tax-bill.pdf",
+    "title": "Council tax bill",
+    "applicant": {
+      "fullName": "Katherine Ashdown",
+      "addressLine1": "Apartment 2, 9 Orchard Ct",
+      "addressLine2": "Mill Ln",
+      "town": "Halverton",
+      "postcode": "HV1 3HD",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "review",
+      "note": "The bill uses the short form 'Kate'; a person confirms it is the same applicant."
+    },
+    "truth": {
+      "document_type": "council_tax_bill",
+      "issuer_name": "Halverton District Council",
+      "holder_name": "Ms Kate Ashdown",
+      "address_lines": [
+        "Flat 2",
+        "9 Orchard Court",
+        "Mill Lane"
+      ],
+      "town": "Halverton",
+      "postcode": "HV1 3HD",
+      "document_date": "2026-09-14",
+      "account_reference": "6002 41187"
+    }
+  },
+  {
+    "file": "04-water-bill-photo.jpg",
+    "title": "Phone photo of a water bill",
+    "applicant": {
+      "fullName": "Priya Natarajan",
+      "addressLine1": "22 Heron Way",
+      "addressLine2": "Eastcliff",
+      "town": "Halverton",
+      "postcode": "HV3 5RS",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "accept",
+      "note": "Photographed at an angle, with a shadow across the page."
+    },
+    "truth": {
+      "document_type": "utility_bill",
+      "issuer_name": "Greyfield Water Services",
+      "holder_name": "Ms Priya Natarajan",
+      "address_lines": [
+        "22 Heron Way",
+        "Eastcliff"
+      ],
+      "town": "Halverton",
+      "postcode": "HV3 5RS",
+      "document_date": "2026-09-22",
+      "account_reference": "GW-55190-3382"
+    }
+  },
+  {
+    "file": "05-old-broadband-bill.pdf",
+    "title": "Broadband bill older than 3 months",
+    "applicant": {
+      "fullName": "Samuel Okafor",
+      "addressLine1": "5 Beacon St",
+      "addressLine2": "",
+      "town": "Halverton",
+      "postcode": "HV2 4NE",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "reject",
+      "note": "Dated 11 May 2026, more than 3 months before the application."
+    },
+    "truth": {
+      "document_type": "utility_bill",
+      "issuer_name": "Northgate Broadband Ltd",
+      "holder_name": "Mr Samuel Okafor",
+      "address_lines": [
+        "5 Beacon Street"
+      ],
+      "town": "Halverton",
+      "postcode": "HV2 4NE",
+      "document_date": "2026-05-11",
+      "account_reference": "NB-30418827"
+    }
+  },
+  {
+    "file": "06-gas-bill-other-person.pdf",
+    "title": "Gas bill for another person",
+    "applicant": {
+      "fullName": "Eleanor Mary Whitcombe",
+      "addressLine1": "Flat 3, 27 Kingsmere Road",
+      "addressLine2": "Ashbury",
+      "town": "Halverton",
+      "postcode": "HV4 7QT",
+      "applicationDate": "2026-10-28"
+    },
+    "expected": {
+      "decision": "reject",
+      "note": "Same address and surname, but the bill is addressed to Margaret, not Eleanor."
+    },
+    "truth": {
+      "document_type": "utility_bill",
+      "issuer_name": "Copperleaf Gas Ltd",
+      "holder_name": "Mrs Margaret Whitcombe",
+      "address_lines": [
+        "Flat 3",
+        "27 Kingsmere Road",
+        "Ashbury"
+      ],
+      "town": "Halverton",
+      "postcode": "HV4 7QT",
+      "document_date": "2026-10-09",
+      "account_reference": "CG 7719 0442 18"
+    }
+  }
+]

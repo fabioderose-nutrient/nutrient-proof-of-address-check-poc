@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proof of address check</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.cloud.pspdfkit.com/pspdfkit-web@1.24.0/nutrient-viewer.js" defer></script>
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Proof of address check</h1>
+      <span class="subtitle">Applicant details compared with the document, extracted by the Nutrient Data Extraction API</span>
+      <span id="key-warning" class="key-warning" hidden></span>
+    </header>
+
+    <main class="layout">
+      <form id="form" class="card form" autocomplete="off">
+        <label class="field">
+          <span>Sample</span>
+          <select id="sample">
+            <option value="">Load a sample...</option>
+          </select>
+        </label>
+        <p id="sample-note" class="hint sample-note" hidden></p>
+
+        <fieldset>
+          <legend>Applicant</legend>
+          <label class="field"><span>Full name</span><input id="fullName" required /></label>
+          <label class="field"><span>Address line 1</span><input id="addressLine1" required /></label>
+          <label class="field"><span>Address line 2</span><input id="addressLine2" /></label>
+          <div class="row">
+            <label class="field"><span>Town</span><input id="town" /></label>
+            <label class="field"><span>Postcode</span><input id="postcode" required /></label>
+          </div>
+          <label class="field"><span>Application date</span><input id="applicationDate" type="date" required /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Proof of address</legend>
+          <label class="file">
+            <input id="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.tif,.tiff" />
+            <span id="file-name">Choose a PDF or a photo</span>
+          </label>
+          <label class="field">
+            <span>Extraction mode</span>
+            <select id="mode"></select>
+          </label>
+        </fieldset>
+
+        <button id="submit" type="submit">Check document</button>
+        <p id="rules" class="hint"></p>
+      </form>
+
+      <section class="card result" id="result" aria-live="polite">
+        <div class="empty">Fill in the applicant, add a document and click <strong>Check document</strong>.</div>
+      </section>
+
+      <section class="card viewer-card">
+        <div class="viewer-head">
+          <h2>Evidence on the document</h2>
+          <div class="legend"><i class="pass"></i>Match<i class="review"></i>Review<i class="fail"></i>Mismatch<i class="info"></i>Recorded</div>
+        </div>
+        <div id="viewer"></div>
+      </section>
+    </main>
+  </body>
+</html>
